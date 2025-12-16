@@ -149,17 +149,34 @@ export default function Home() {
 
         <div className="mt-16 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            About LEDES Standards
+            About LEDES® Standards
           </h3>
           <div className="prose dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The Legal Electronic Data Exchange Standard (LEDES) is the industry-standard format for electronic billing 
-              in legal services. LEDES enables law firms to submit invoices to corporate clients in a consistent, 
-              machine-readable format.
+              <strong>LEDES®</strong> (Legal Electronic Data Exchange Standard) is maintained by the LEDES Oversight Committee (LOC), 
+              an international, voluntary, not-for-profit organization comprised of legal industry representatives. LOC is charged 
+              with creating and maintaining open standard formats for the electronic exchange of billing and other information 
+              between corporations and law firms.
             </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              First formed in 1995, LOC now offers several different formats for legal ebilling, as well as schemas for budgeting, 
+              timekeeper, rate management and IP matter management data exchange. LEDES ebilling standards are globally recognized 
+              and accepted as industry-specific EDI standards.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              <strong>LOC operates on 5 basic principles:</strong>
+            </p>
+            <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2 mb-4">
+              <li>Keep it simple</li>
+              <li>Make it unambiguous</li>
+              <li>Diverge from existing formats as little as absolutely necessary</li>
+              <li>Only ask for information the law firm is typically able to provide from their financial system</li>
+              <li>Meet the needs of corporations, law firms and legal industry software vendors to the maximum extent possible</li>
+            </ul>
             <p className="text-gray-700 dark:text-gray-300">
               This platform provides critical infrastructure for working with LEDES data: parsing files, validating 
-              compliance, generating invoices, converting between formats, and analyzing legal spend patterns.
+              compliance, generating invoices, converting between formats, and analyzing legal spend patterns. 
+              For official standards and specifications, visit <a href="https://ledes.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">LEDES.org</a>.
             </p>
           </div>
         </div>

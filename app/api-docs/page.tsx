@@ -41,10 +41,13 @@ export default function APIDocsPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            API Documentation
+            LEDES® Standards Documentation
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Complete API reference and LEDES standards documentation.
+            Complete reference for Legal Electronic Data Exchange Standard formats and specifications.
+          </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            Official standards maintained by <a href="https://ledes.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">LEDES Oversight Committee</a>
           </p>
         </div>
 
@@ -94,12 +97,14 @@ export default function APIDocsPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-3">
-                LEDES 1998B
+                LEDES 98B Format
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                The LEDES 1998B format is the most widely adopted standard for legal e-billing. It consists of 18 pipe-delimited fields.
+                The LEDES 98B format (commonly called LEDES 1998B) is the most widely adopted standard for legal e-billing. 
+                It consists of 18 pipe-delimited fields and is globally recognized as the industry-specific EDI standard 
+                for legal billing information exchange.
               </p>
-              <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+              <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 font-mono text-xs overflow-x-auto">
                 <div className="text-gray-900 dark:text-gray-300">
                   INVOICE_NUMBER|INVOICE_DATE|CLIENT_MATTER_ID|LAW_FIRM_MATTER_ID|INVOICE_DESCRIPTION|
                   LINE_ITEM_NUMBER|EXP/FEE/INV_ADJ_DATE|EXP/FEE/INV_ADJ_TYPE|
@@ -107,23 +112,60 @@ export default function APIDocsPage() {
                   TIMEKEEPER_CLASSIFICATION|HOURS|RATE|AMOUNT|ACTIVITY_CODE|TASK_CODE|PHASE_CODE
                 </div>
               </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                <a href="https://ledes.org/ledes-98b-format/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  View official LEDES 98B specification →
+                </a>
+              </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-3">
-                LEDES 98BI
+                LEDES 98BI Format
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                LEDES 98BI extends the 1998B format with additional fields for enhanced billing detail and UTBMS code support.
+                LEDES 98BI extends the 98B format with additional fields for enhanced billing detail and UTBMS code support.
+                This format accommodates more complex billing scenarios and alternate fee arrangements.
               </p>
               <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 text-sm text-gray-700 dark:text-gray-300">
-                Includes all LEDES 1998B fields plus:
+                Includes all LEDES 98B fields plus:
                 <ul className="list-disc list-inside mt-2 ml-4">
-                  <li>UTBMS Code</li>
+                  <li>UTBMS Code (Uniform Task-Based Management System)</li>
                   <li>Line Item Adjustment Number</li>
                   <li>Additional expense categorization</li>
+                  <li>Enhanced support for alternate fee arrangements</li>
                 </ul>
               </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                <a href="https://ledes.org/ledes-98bi-format/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  View official LEDES 98BI specification →
+                </a>
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-3">
+                Other LEDES Formats
+              </h3>
+              <div className="space-y-3 text-gray-700 dark:text-gray-300">
+                <div>
+                  <strong className="text-blue-600 dark:text-blue-400">LEDES 2000:</strong> Enhanced format with additional functionality
+                </div>
+                <div>
+                  <strong className="text-blue-600 dark:text-blue-400">LEDES XML Ebilling (v2.0, v2.1, v2.2):</strong> XML-based formats for modern systems
+                </div>
+                <div>
+                  <strong className="text-blue-600 dark:text-blue-400">LEDES XML Budgeting:</strong> Schema for legal budget exchange
+                </div>
+                <div>
+                  <strong className="text-blue-600 dark:text-blue-400">LEDES XML Timekeeper Attributes:</strong> Format for timekeeper information
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                <a href="https://ledes.org/ledes-standards/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  View all LEDES standards →
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -206,12 +248,13 @@ export default function APIDocsPage() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">
-                Activity Codes
+                LOC Activity Codes (Revised 2013)
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                UTBMS (Uniform Task-Based Management System) activity codes standardize billing descriptions.
+                UTBMS (Uniform Task-Based Management System) activity codes standardize billing descriptions. 
+                The LOC maintains and updates these codes, which are used worldwide in legal billing.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {[
                   { code: 'L110', desc: 'Case Assessment, Development and Administration' },
                   { code: 'L120', desc: 'Fact Investigation/Development' },
@@ -219,6 +262,10 @@ export default function APIDocsPage() {
                   { code: 'L140', desc: 'Document and File Management' },
                   { code: 'L210', desc: 'Pleadings' },
                   { code: 'L310', desc: 'Discovery' },
+                  { code: 'L320', desc: 'Depositions' },
+                  { code: 'L410', desc: 'Motions' },
+                  { code: 'L510', desc: 'Trial Preparation and Support' },
+                  { code: 'L610', desc: 'Appeals' },
                   { code: 'C110', desc: 'Communication with Client' },
                   { code: 'E110', desc: 'Court/Agency Fees' },
                 ].map((item) => (
@@ -232,24 +279,91 @@ export default function APIDocsPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <a href="https://ledes.org/loc-revised-activity-codes-2013/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  View complete LOC Activity Codes (2013) →
+                </a> | 
+                <a href="https://utbms.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline ml-2">
+                  Visit UTBMS.com →
+                </a>
+              </p>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">
-                Task Codes
+                LOC Expense Codes (Revised 2013)
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Task codes provide additional granularity within activity categories.
+                Standardized expense codes for legal billing, maintained by the LEDES Oversight Committee.
               </p>
               <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 text-gray-700 dark:text-gray-300">
                 <ul className="space-y-2">
-                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">A101</span> - Initial case assessment</li>
-                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">A102</span> - Document review and analysis</li>
-                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">A103</span> - Client meetings and conferences</li>
-                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">A104</span> - Strategy development</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">E101</span> - Filing and Service Fees</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">E102</span> - Witness and Deposition Fees</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">E103</span> - Court Reporter Fees</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">E104</span> - Expert Fees</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">E105</span> - Investigation Fees</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">E106</span> - Consultant Fees</li>
                 </ul>
               </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                <a href="https://ledes.org/loc-revised-expense-codes-2013/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  View complete LOC Expense Codes (2013) →
+                </a>
+              </p>
             </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3">
+                LOC Timekeeper Classification Codes (Revised 2014)
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Standardized codes for classifying legal professionals in billing data.
+              </p>
+              <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 text-gray-700 dark:text-gray-300">
+                <ul className="space-y-2">
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">PTR</span> - Partner</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">ASC</span> - Associate</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">CON</span> - Counsel</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">PRL</span> - Paralegal</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">LAW</span> - Law Clerk</li>
+                  <li><span className="font-mono font-bold text-blue-600 dark:text-blue-400">OTH</span> - Other Professional</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                <a href="https://ledes.org/loc-revised-timekeeper-classification-codes-2014/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  View complete Timekeeper Classification Codes (2014) →
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* LEDES API */}
+        <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg shadow-lg p-8 border border-purple-200 dark:border-purple-800 mb-8">
+          <h2 className="text-3xl font-bold text-purple-900 dark:text-purple-400 mb-6">
+            LEDES API v1 (2020)
+          </h2>
+          <div className="prose dark:prose-invert max-w-none text-purple-900 dark:text-purple-300">
+            <p className="mb-4">
+              The LEDES API provides a standardized RESTful interface for exchanging legal billing data between systems. 
+              The API follows modern REST principles and supports JSON data exchange.
+            </p>
+            <p className="mb-4">
+              <strong>Key Features:</strong>
+            </p>
+            <ul className="space-y-2 ml-4 list-disc mb-4">
+              <li>RESTful endpoints for invoice submission and retrieval</li>
+              <li>JSON-based data exchange</li>
+              <li>OAuth 2.0 authentication</li>
+              <li>Webhook notifications for invoice status updates</li>
+              <li>Support for all LEDES formats (98B, 98BI, 2000, XML)</li>
+            </ul>
+            <p className="text-sm">
+              <a href="https://ledes.org/ledes-api/" target="_blank" rel="noopener noreferrer" className="text-purple-600 dark:text-purple-400 hover:underline font-semibold">
+                View complete LEDES API documentation →
+              </a>
+            </p>
           </div>
         </div>
 
@@ -262,21 +376,43 @@ export default function APIDocsPage() {
             <h3 className="text-xl font-bold mb-3">Getting Started</h3>
             <ol className="space-y-2 ml-4 list-decimal">
               <li>Review the LEDES format specification above</li>
+              <li>Determine which format best suits your needs (see <a href="https://ledes.org/which-format-should-i-use/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">format selection guide</a>)</li>
               <li>Prepare your billing data in the correct field order</li>
-              <li>Use pipe (|) as the field delimiter</li>
+              <li>Use pipe (|) as the field delimiter for text formats</li>
               <li>Format dates as YYYYMMDD</li>
-              <li>Validate your files using the Validator tool</li>
+              <li>Include appropriate UTBMS codes from <a href="https://utbms.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">UTBMS.com</a></li>
+              <li>Validate your files using the Validator tool on this site</li>
             </ol>
 
             <h3 className="text-xl font-bold mt-6 mb-3">Best Practices</h3>
             <ul className="space-y-2 ml-4 list-disc">
               <li>Always validate files before submission to clients</li>
               <li>Use consistent timekeeper IDs across invoices</li>
-              <li>Include UTBMS codes for better billing transparency</li>
+              <li>Include UTBMS activity and expense codes for better billing transparency</li>
               <li>Ensure hours × rate = amount for time entries</li>
               <li>Keep descriptions clear and professional</li>
+              <li>Follow LOC's 5 principles: simplicity, clarity, consistency, feasibility, and mutual benefit</li>
+              <li>Consider global eInvoicing requirements for international matters</li>
+              <li>Document alternate fee arrangements clearly in invoice data</li>
+            </ul>
+
+            <h3 className="text-xl font-bold mt-6 mb-3">Additional Resources</h3>
+            <ul className="space-y-2 ml-4 list-disc">
+              <li><a href="https://ledes.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">LEDES.org</a> - Official standards and documentation</li>
+              <li><a href="https://utbms.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">UTBMS.com</a> - Complete UTBMS code reference</li>
+              <li><a href="https://ledes.org/ledes-error-codes/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">LEDES Error Codes</a> - Standardized error reporting</li>
+              <li><a href="https://ledes.org/vendor-marketplace/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">Vendor Marketplace</a> - Certified LEDES software providers</li>
             </ul>
           </div>
+        </div>
+
+        {/* Footer Notice */}
+        <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600">
+          <p className="text-sm text-gray-700 dark:text-gray-300 text-center">
+            LEDES® is a registered service mark of the LEDES Oversight Committee. 
+            This site is an independent tool for working with LEDES data. 
+            For official standards, visit <a href="https://ledes.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">LEDES.org</a>
+          </p>
         </div>
       </main>
     </div>
