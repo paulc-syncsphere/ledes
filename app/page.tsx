@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -6,7 +7,14 @@ export default function Home() {
       <nav className="border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center">
+            <div className="flex items-center space-x-3">
+              <Image 
+                src="/ledes-logo.png" 
+                alt="LEDES Logo" 
+                width={50} 
+                height={50}
+                className="rounded-lg"
+              />
               <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                 LEDES Standards
               </h1>
