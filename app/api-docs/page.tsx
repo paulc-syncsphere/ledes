@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from '@/components/Logo';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function APIDocsPage() {
   return (
@@ -31,6 +32,7 @@ export default function APIDocsPage() {
               <Link href="/api-docs" className="text-blue-600 dark:text-blue-400 font-semibold">
                 API Docs
               </Link>
+              <ThemeToggle />
             </div>
           </div>
         </div>

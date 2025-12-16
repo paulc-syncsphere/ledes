@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="flex items-center space-x-4">
+              <ThemeToggle />
               <Link
                 href="/parser"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"

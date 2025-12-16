@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Logo from '@/components/Logo';
+import ThemeToggle from '@/components/ThemeToggle';
 import FileUpload from '@/components/FileUpload';
 import { LEDESParser, LEDESParseResult } from '@/lib/ledes-parser';
 
@@ -47,6 +48,7 @@ export default function ParserPage() {
               <Link href="/analytics" className="text-gray-700 dark:text-gray-300 hover:text-blue-600">
                 Analytics
               </Link>
+              <ThemeToggle />
             </div>
           </div>
         </div>
