@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Logo from '@/components/Logo';
 import FileUpload from '@/components/FileUpload';
 import { LEDESParser, LEDESParseResult } from '@/lib/ledes-parser';
 
@@ -28,14 +28,8 @@ export default function ParserPage() {
           <div className="flex justify-between h-16">
             <div className="flex items-center space-x-3">
               <Link href="/" className="flex items-center space-x-3">
-                <Image 
-                  src="/ledes-logo.png" 
-                  alt="LEDES Logo" 
-                  width={50} 
-                  height={50}
-                  className="rounded-lg"
-                />
-                <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                <Logo />
+                <span className="text-2xl font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
                   LEDES Standards
                 </span>
               </Link>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   return (
@@ -8,14 +8,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center space-x-3">
-              <Image 
-                src="/ledes-logo.png" 
-                alt="LEDES Logo" 
-                width={50} 
-                height={50}
-                className="rounded-lg"
-              />
-              <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+              <Logo />
+              <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 whitespace-nowrap">
                 LEDES Standards
               </h1>
             </div>
